@@ -6,11 +6,7 @@ import argparse
 import configparser
 import gzip
 
-def get_bearer_token():
-    # Create API Token in Cribl Stream, add Client ID and Secret to env variables
-    client_id = os.environ.get("CRIBL_CLIENT_ID")
-    client_secret = os.environ.get("CRIBL_CLIENT_SECRET")
-    
+def get_bearer_token(client_id, client_secret):
     if not client_id or not client_secret:
         raise ValueError("CRIBL_CLIENT_ID and CRIBL_CLIENT_SECRET must be set as environment variables")
     
@@ -267,7 +263,7 @@ if __name__ == "__main__":
         local_filename = lookup_filename
 
         # 4. Get the token
-        token = get_bearer_token()
+        token = get_bearer_token(client_id, client_secret)
         if not token:
             exit(1)
         print(f"Bearer token obtained: {token[:10]}...")
