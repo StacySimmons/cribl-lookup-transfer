@@ -8,7 +8,7 @@ import gzip
 
 def get_bearer_token(client_id, client_secret):
     if not client_id or not client_secret:
-        raise ValueError("CRIBL_CLIENT_ID and CRIBL_CLIENT_SECRET must be set as environment variables")
+        raise ValueError("CRIBL_CLIENT_ID and CRIBL_CLIENT_SECRET must be provided via arguments or configuration file.")
     
     url = "https://login.cribl.cloud/oauth/token"
     headers = {"Content-Type": "application/json"}
