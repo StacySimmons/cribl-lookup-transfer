@@ -4,3 +4,4 @@ config.ini
 *.csv
 *.gz
 *.scratch
+*.store

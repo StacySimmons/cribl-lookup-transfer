@@ -68,11 +68,11 @@ python cribl_lookup_transfer.py --help
 ## Workflow
 1. Authenticates with Cribl Cloud API using client credentials
 2. Checks for lookup file existence in source worker group
-3. Download the file from source worker group
+3. Downloads the file from source worker group
 4. Uploads the file to target worker group
-5. Creates or updtes the lookup file configuration
+5. Creates or updates the lookup file configuration
 6. Commits the changes
-7. Deploys the cdhanges to the target worker group
+7. Deploys the changes to the target worker group
 
 ## File Format Support
 - ```.csv```: Standard CSV files (Content-Type: text/csv)
